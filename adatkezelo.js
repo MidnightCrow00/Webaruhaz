@@ -1,6 +1,6 @@
 export function rendez(lista, kulcs, rIrany) {
-  const rlista = lista.sort(function (e1, e2) {
-    return e1[kulcs] < e2[kulcs] ? -1 * rIrany : 1 * rIrany;
+  const rlista = lista.sort(function (a1, a3) {
+    return a1[kulcs] < a3[kulcs] ? -1 * rIrany : 1 * rIrany;
   });
 
   return rlista;
@@ -8,7 +8,7 @@ export function rendez(lista, kulcs, rIrany) {
 
 export function szuresAr(lista, keresesAr) {
   const szurt_lista = lista.filter(function (allat) {
-    return allat.ar.toString().includes(keresesAr);
+    return allat.szar.toString().includes(keresesAr);
   });
 
   return szurt_lista;
