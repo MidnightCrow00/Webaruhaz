@@ -1,30 +1,37 @@
-export function tablazatLetrehoz(lista) {
-    let txt = "<div class='table-responsive'><table class='table table-striped'>";
-    txt += "<thead>";
-    txt += "<tr><th>Név</th><th></th><th>Ár(Ft)</th><th>Leírás</th><th></th></tr>";
-    txt += "</thead>";
-    txt += "<tbody>";
-    lista.forEach((elem, index) => {
-      txt += `<tr>
-              <td>${elem.nev}</td>
-              <td><img id="kepek" src="${elem.kep}"></td>
-              <td>${elem.ar}</td>
-              <td>${elem.leiras}</td>
-              <td><button id="${index}">🧹</button></td>
-              <td><button id="${index}">✏</button></td>
-          </tr>`;
-    });
-    txt += "</tbody>";
-    txt += "</table></div>";
-    return txt;
-  }
-  
-  export function megjelenit(txt) {
-    const ELEM = $(".adatok");
-    ELEM.html(txt);
-  }
-  export function megjelenitKetto(txt) {
-    const ELEM = $(".adatokKetto");
-    ELEM.html(txt);
-  }
-  
+export function rendez(lista, kulcs, rIrany) {
+  const rlista = lista.sort(function (e1, e2) {
+    return e1[kulcs] < e2[kulcs] ? -1 * rIrany : 1 * rIrany;
+  });
+
+  return rlista;
+}
+
+export function szuresAr(lista, keresesAr) {
+  const szurt_lista = lista.filter(function (allat) {
+    return allat.ar.toString().includes(keresesAr);
+  });
+
+  return szurt_lista;
+}
+
+export function szuresNev(lista, keresesNev) {
+  const szurt_lista = lista.filter(function (allat) {
+    return allat.sznev.includes(keresesNev);
+  });
+
+  return szurt_lista;
+}
+
+export function szuresLeiras(lista, keresesLeiras) {
+  const szurt_lista = lista.filter(function (allat) {
+    return allat.szleiras.includes(keresesLeiras);
+  });
+
+  return szurt_lista;
+}
+
+export function torol(lista, index) {
+  lista.splice(index, 1);
+
+  return lista;
+}
