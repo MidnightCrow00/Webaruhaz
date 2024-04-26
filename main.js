@@ -1,6 +1,7 @@
 import { allatokLISTA } from "./adat.js";
 import { megjelenit, tablazatLetrehoz } from "./tablazat.js";
-import { rendez,szuresAr,szuresNev,szuresLeiras,torol }from "./adatkezelo.js";    
+import { rendez,szuresAr,szuresNev,szuresLeiras,torol }from "./adatkezelo.js";  
+import { kartyaLetrehoz } from "./kartya.js";  
 
 let rIrany = 1;
 init(allatokLISTA);
@@ -9,7 +10,7 @@ szuresNevSzerint();
 szuresLeirasSzerint();
 
 function init(lista) {
-  let txt = tablazatLetrehoz(lista);
+  let txt = kartyaLetrehoz(lista);
   megjelenit(txt);
   rendezes();
   torolesemeny();

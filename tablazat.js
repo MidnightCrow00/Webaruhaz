@@ -21,7 +21,7 @@ export function tablazatLetrehoz(lista) {
 
 
   export function megjelenit(txt) {
-    const ELEM = $(".adatok");
+    const ELEM = $(".padatok");
     ELEM.html(txt);
   }
 
