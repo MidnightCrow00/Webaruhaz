@@ -1,6 +1,6 @@
 export function rendez(lista, kulcs, rIrany) {
-  const rlista = lista.sort(function (a1, a3) {
-    return a1[kulcs] < a3[kulcs] ? -1 * rIrany : 1 * rIrany;
+  const rlista = lista.sort(function (a1, a2) {
+    return a1[kulcs] < a2[kulcs] ? -1 * rIrany : 1 * rIrany;
   });
 
   return rlista;
@@ -8,7 +8,7 @@ export function rendez(lista, kulcs, rIrany) {
 
 export function szuresAr(lista, keresesAr) {
   const szurt_lista = lista.filter(function (allat) {
-    return allat.szar.toString().includes(keresesAr);
+    return allat.ar.toString().includes(keresesAr);
   });
 
   return szurt_lista;
@@ -16,7 +16,7 @@ export function szuresAr(lista, keresesAr) {
 
 export function szuresNev(lista, keresesNev) {
   const szurt_lista = lista.filter(function (allat) {
-    return allat.sznev.includes(keresesNev);
+    return allat.nev.includes(keresesNev);
   });
 
   return szurt_lista;
@@ -24,7 +24,7 @@ export function szuresNev(lista, keresesNev) {
 
 export function szuresLeiras(lista, keresesLeiras) {
   const szurt_lista = lista.filter(function (allat) {
-    return allat.szleiras.includes(keresesLeiras);
+    return allat.leiras.includes(keresesLeiras);
   });
 
   return szurt_lista;

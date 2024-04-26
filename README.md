@@ -13,7 +13,7 @@ Készíts 3 szűrés mezőt, amiben kiválasztott mezők alapján szűrheted az 
 
 ## PUBLIKUS FELÜLET 
 
-A publikus felületen div-ekben jelenítsük meg az adatokat. (az előzetes minta alapján! Figyelj a reszponzitvitásra!
+A publikus felületen div-ekben jelenítsük meg az adatokat. Az előzetes minta alapján! Figyelj a reszponzitvitásra!
 Az oldalon legyen szűrési és rendezési lehetőség is!
 Kosár funkció:  A publikus felületen a terméket helyezheted a kosárba. A kosárban lévő termékeket listázhatod, törölheted, módosíthatod az elemszámát, majd leadhatod a rendelést!
 ++ Lehet, hogy szükséged lesz a localStorage használatára. 

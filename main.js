@@ -16,15 +16,16 @@ function init(lista) {
 }
 
 function rendezes() {
-  const cimMezoELEM = $(".adatok table th").eq(0);
-  cimMezoELEM.on("click", function () {
+  const nevMezoELEM = $(".adatok table th").eq(0);
+  nevMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "nev", rIrany);
     console.log(lista);
+    init(lista);
     rIrany *= -1;
     console.log(rIrany);
   });
 
-  const arMezoELEM = $(".adatok table th").eq(1);
+  const arMezoELEM = $(".adatok table th").eq(2);
     arMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "ar", rIrany);
     console.log(lista);
@@ -33,8 +34,8 @@ function rendezes() {
     console.log(rIrany);
   });
 
-  const leirasMezoELEM = $(".adatok table th").eq(2);
-    arMezoELEM.on("click", function () {
+  const leirasMezoELEM = $(".adatok table th").eq(3);
+    leirasMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "leiras", rIrany);
     console.log(lista);
     init(lista);
