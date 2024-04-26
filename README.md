@@ -1,4 +1,5 @@
 ## Specifikációk
+
 Készíts "webáruházat" tetszőleges témában. 
 
 Egy listában tároljuk az objektumokat, minden objektumnak legalább 3 adata legyen!
@@ -9,7 +10,9 @@ A táblázat fejlécére kattintva tudjunk rendezni növekvő, illetve csökken�
 Készíts 3 szűrés mezőt, amiben kiválasztott mezők alapján szűrheted az adataidat!
 ++ A táblázat minden sora mellett legyen egy törlés gomb, amivel az adott sort tudjuk törölni a táblázatból. 
 ++++ A táblázat minden sora mellett legyen egy szerkesztés gomb, ahol tudjuk szerkeszteni a lista adott sorát!
-PUBLIKUS FELÜLET 
+
+## PUBLIKUS FELÜLET 
+
 A publikus felületen div-ekben jelenítsük meg az adatokat. (az előzetes minta alapján! Figyelj a reszponzitvitásra!
 Az oldalon legyen szűrési és rendezési lehetőség is!
 Kosár funkció:  A publikus felületen a terméket helyezheted a kosárba. A kosárban lévő termékeket listázhatod, törölheted, módosíthatod az elemszámát, majd leadhatod a rendelést!
@@ -19,6 +22,7 @@ Kosár funkció:  A publikus felületen a terméket helyezheted a kosárba. A ko
 A kiemelt termék mellett megjelenik egy bal és egy jobb léptető gomb, amivel léptetni tudjuk a terméket.
 
 ## Függvények
+
 1. *** tablazatLetrehoz(lista) *** -> txt lista alapján készít html kódot, táblázatot, visszaadja az elkészült htlm szöveget, minden sor mellett egy törlés ikonnal
 2. *** megjelenit(txt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
 3. *** rendez(lista) *** -> visszért.: rlista; a lista megrendezi a listát az adott paraméter szerint (név kulcs szerint) és a megrendezett listát visszadja, akkor futt le, amikor rákattintunk a táblázat fejlécére
