@@ -1,22 +1,20 @@
 export function kartyaLetrehoz(lista) {
-  let txt = "<div class='container mt-3'>";
-  txt += "<div class='card' style='width:400px'>";
-  txt += "<div class='card-body'>";
+  let txt = "<div class='card col-md-3' style='width:400px;padding:10px; margin:10px;'>";
   lista.forEach((elem, index) => {
     txt += `
         <img id='kepek' class='card-img-top' src='${elem.kep}' alt='Card image' style='width:100%'>
+        <div class='card-body'>
         <h4 class="card-title">${elem.nev}</h4>
+        <p class="card-text">${elem.ar} Ft</p>
         <p class="card-text">${elem.leiras}</p>
-        <a href="#" class="btn btn-primary">See Profile</a>
-        <button id="${index}">✏</button>`;
+        <a href="#" id="${index}" class="btn btn-primary">Kosárba teszem</a>`;
   });
-  txt += "</div>";
   txt += "</div>";
   txt += "</div>";
   return txt;
 }
 
 export function kartyaMegjelenit(txt) {
-  const ELEM = $(".adatok");
+  const ELEM = $(".padatok");
   ELEM.html(txt);
 }

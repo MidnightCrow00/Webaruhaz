@@ -32,6 +32,9 @@ export function szuresLeiras(lista, keresesLeiras) {
 
 export function torol(lista, index) {
   lista.splice(index, 1);
-
+  return lista;
+}
+export function szerkeszt(lista, index) {
+  lista.splice(index, 1);
   return lista;
 }

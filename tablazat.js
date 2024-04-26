@@ -8,10 +8,10 @@ export function tablazatLetrehoz(lista) {
       txt += `<tr>
               <td>${elem.nev}</td>
               <td><img id="kepek" src="${elem.kep}"></td>
-              <td>${elem.ar}</td>
+              <td>${elem.ar} Ft</td>
               <td>${elem.leiras}</td>
-              <td><button id="${index}">🧹</button></td>
-              <td><button id="${index}">✏</button></td>
+              <td><button class="torol" id="${index}">🧹</button></td>
+              <td><button class="szerkeszt" id="${index}">✏</button></td>
           </tr>`;
     });
     txt += "</tbody>";
@@ -19,9 +19,8 @@ export function tablazatLetrehoz(lista) {
     return txt;
   }
 
-
   export function megjelenit(txt) {
-    const ELEM = $(".padatok");
+    const ELEM = $(".adatok");
     ELEM.html(txt);
   }
 

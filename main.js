@@ -1,16 +1,32 @@
 import { allatokLISTA } from "./adat.js";
 import { megjelenit, tablazatLetrehoz } from "./tablazat.js";
 import { rendez,szuresAr,szuresNev,szuresLeiras,torol }from "./adatkezelo.js";  
-import { kartyaLetrehoz } from "./kartya.js";  
+import { kartyaLetrehoz, kartyaMegjelenit } from "./kartya.js"; 
+import { kosarLetrehoz, kosarMegjelenit } from "./kosar.js"; 
 
 let rIrany = 1;
 init(allatokLISTA);
+initKartya(allatokLISTA);
+initKosar(allatokLISTA);
 szuresArSzerint();
 szuresNevSzerint();
 szuresLeirasSzerint();
 
-function init(lista) {
+function initKartya(lista) {
   let txt = kartyaLetrehoz(lista);
+  kartyaMegjelenit(txt);
+  rendezes();
+  torolesemeny();
+}
+function initKosar(lista) {
+  let txt = kosarLetrehoz(lista);
+  kosarMegjelenit(txt);
+  rendezes();
+  torolesemeny();
+}
+
+function init(lista) {
+  let txt = tablazatLetrehoz(lista);
   megjelenit(txt);
   rendezes();
   torolesemeny();
@@ -22,6 +38,8 @@ function rendezes() {
     const lista = rendez(allatokLISTA, "nev", rIrany);
     console.log(lista);
     init(lista);
+    initKartya(lista);
+    initKosar(lista);
     rIrany *= -1;
     console.log(rIrany);
   });
@@ -31,6 +49,8 @@ function rendezes() {
     const lista = rendez(allatokLISTA, "ar", rIrany);
     console.log(lista);
     init(lista);
+    initKartya(lista);
+    initKosar(lista);
     rIrany *= -1;
     console.log(rIrany);
   });
@@ -40,6 +60,8 @@ function rendezes() {
     const lista = rendez(allatokLISTA, "leiras", rIrany);
     console.log(lista);
     init(lista);
+    initKartya(lista);
+    initKosar(lista);
     rIrany *= -1;
     console.log(rIrany);
   });
@@ -50,6 +72,8 @@ function szuresArSzerint() {
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
     init(szuresAr(allatokLISTA, szoveg));
+    initKartya(szuresAr(allatokLISTA, szoveg));
+    initKosar(szuresAr(allatokLISTA, szoveg));
   });
 }
 
@@ -58,6 +82,8 @@ function szuresNevSzerint() {
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
     init(szuresNev(allatokLISTA, szoveg));
+    initKartya(szuresNev(allatokLISTA, szoveg));
+    initKosar(szuresNev(allatokLISTA, szoveg));
   });
 }
 

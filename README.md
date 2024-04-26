@@ -32,9 +32,9 @@ A kiemelt termék mellett megjelenik egy bal és egy jobb léptető gomb, amivel
 
 ## Függvények Publikus felület
 
-1. *** tablazatLetrehoz(lista) *** -> txt lista alapján készít html kódot, táblázatot, visszaadja az elkészült kosarat.
+1. *** kosarLetrehoz(lista) *** -> txt lista alapján készít html kódot, táblázatot, visszaadja az elkészült kosarat.
 2. *** kartyaLetrehoz(klista) *** -> txt lista alapján készít html kódot, táblázatot, visszaadja az elkészült htlm szöveget
-3. *** tablazatMegjelenit(txt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
+3. *** kosarMegjelenit(txt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
 2. *** kartyaMegjelenit(ktxt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
 3. *** rendez(lista, kulcs, rIrany) *** -> visszért.: rlista; a lista megrendezi a listát az adott paraméter szerint (név kulcs szerint) és a megrendezett listát visszadja, akkor futt le, amikor rákattintunk a táblázat fejlécére
 6. *** torol(lista, index) *** -> törli a lista index-edik sorát, minden sor mellett lesz egy torol ikon, amire kattintva megkapjuk az adott sor indexét és meghívodik a torol függvény
