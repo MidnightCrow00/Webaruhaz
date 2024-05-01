@@ -1,6 +1,6 @@
 export const allatokLISTA = [
     {
-      nev: "Bárány, Birka",
+      nev: "Bárány, birka",
       ar: 35000,
       kep: 'https://hargitanepe.ro/wp-content/uploads/2016/01/IMG_1345.jpg',
       leiras: "Idősebb és fiatalabb birkák, bárányok, jerkék és kosok vegyesen. 35ezer/db.",

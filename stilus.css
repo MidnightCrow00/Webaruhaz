@@ -1,7 +1,13 @@
 header{
     text-align: center;
+    padding: 20px 0;
 }
 #kepek{
     width: 250px;
     height: 170px;
+}
+.kartya{
+    width:400px; 
+    padding:10px; 
+    margin:10px; 
 }

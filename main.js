@@ -24,10 +24,10 @@ function initKartya(lista) {
   rendezes();
   kosarbaTeszEsemeny();
 }
-function initKosar(lista) {
-  let txt = kosarLetrehoz(lista);
-  kosarMegjelenit(txt);
-  rendezes();
+function initKosar() {
+  const uresKosar = []; 
+  const txt = kosarLetrehoz(uresKosar); 
+  kosarMegjelenit(txt); 
 }
 
 function init(lista) {
@@ -102,13 +102,16 @@ function torolesemeny() {
     init(LISTA);
   });
 }
-
+let kosarTartalom = []; 
 function kosarbaTeszEsemeny() {
-  const kosarELEM = $(".kosarbaTesz");
-  kosarELEM.on("click", function(event) {
+  $(".kosarbaTesz").on("click", function(event) {
     let index = event.target.id; 
     let kivalasztottElem = allatokLISTA[index]; 
-    let kosarTartalom = kosarLetrehoz(kosarELEM); 
-    kosarMegjelenit(kosarTartalom);
+    if (!kosarTartalom[kivalasztottElem.nev]) {
+      kosarTartalom[kivalasztottElem.nev] = kivalasztottElem; 
+    }
+
+    kosarMegjelenit(kosarLetrehoz(Object.values(kosarTartalom)));
   });
+
 }
