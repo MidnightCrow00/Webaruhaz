@@ -7,7 +7,7 @@ export function kartyaLetrehoz(lista) {
         <h4 class="card-title">${elem.nev}</h4>
         <p class="card-text">${elem.ar} Ft</p>
         <p class="card-text">${elem.leiras}</p>
-        <a href="#" id="${index}" class="btn btn-primary">Kosárba teszem</a>`;
+        <a id="${index}" class="btn btn-primary kosarbaTesz">Kosárba teszem</a>`;
   });
   txt += "</div>";
   txt += "</div>";
@@ -15,6 +15,6 @@ export function kartyaLetrehoz(lista) {
 }
 
 export function kartyaMegjelenit(txt) {
-  const ELEM = $(".padatok");
+  const ELEM = $(".kadatok");
   ELEM.html(txt);
 }

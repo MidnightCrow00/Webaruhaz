@@ -1,21 +1,17 @@
 export function tablazatLetrehoz(lista) {
-    let txt = "<div class='table-responsive'><table class='table table-striped'>";
-    txt += "<thead>";
+  let txt = "";
+  txt += "<table class='table table-striped'>";
     txt += "<tr><th>Név</th><th></th><th>Ár(Ft)</th><th>Leírás</th><th></th></tr>";
-    txt += "</thead>";
-    txt += "<tbody>";
     lista.forEach((elem, index) => {
       txt += `<tr>
               <td>${elem.nev}</td>
-              <td><img id="kepek" src="${elem.kep}"></td>
+              <td><img id="kepek" alt="kep" src="${elem.kep}"></td>
               <td>${elem.ar} Ft</td>
               <td>${elem.leiras}</td>
-              <td><button class="torol" id="${index}">🧹</button></td>
-              <td><button class="szerkeszt" id="${index}">✏</button></td>
+              <td class="kuka" id="${index}">🧹</td>
           </tr>`;
     });
-    txt += "</tbody>";
-    txt += "</table></div>";
+    txt += "</table>";
     return txt;
   }
 

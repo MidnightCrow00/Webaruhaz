@@ -1,8 +1,14 @@
 import { allatokLISTA } from "./adat.js";
 import { megjelenit, tablazatLetrehoz } from "./tablazat.js";
-import { rendez,szuresAr,szuresNev,szuresLeiras,torol }from "./adatkezelo.js";  
-import { kartyaLetrehoz, kartyaMegjelenit } from "./kartya.js"; 
-import { kosarLetrehoz, kosarMegjelenit } from "./kosar.js"; 
+import {
+  rendez,
+  szuresAr,
+  szuresNev,
+  szuresLeiras,
+  torol,
+} from "./adatkezelo.js";
+import { kartyaLetrehoz, kartyaMegjelenit } from "./kartya.js";
+import { kosarLetrehoz, kosarMegjelenit } from "./kosar.js";
 
 let rIrany = 1;
 init(allatokLISTA);
@@ -16,13 +22,12 @@ function initKartya(lista) {
   let txt = kartyaLetrehoz(lista);
   kartyaMegjelenit(txt);
   rendezes();
-  torolesemeny();
+  kosarbaTeszEsemeny();
 }
 function initKosar(lista) {
   let txt = kosarLetrehoz(lista);
   kosarMegjelenit(txt);
   rendezes();
-  torolesemeny();
 }
 
 function init(lista) {
@@ -36,34 +41,28 @@ function rendezes() {
   const nevMezoELEM = $(".adatok table th").eq(0);
   nevMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "nev", rIrany);
-    console.log(lista);
     init(lista);
     initKartya(lista);
     initKosar(lista);
     rIrany *= -1;
-    console.log(rIrany);
   });
 
   const arMezoELEM = $(".adatok table th").eq(2);
-    arMezoELEM.on("click", function () {
+  arMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "ar", rIrany);
-    console.log(lista);
     init(lista);
     initKartya(lista);
     initKosar(lista);
     rIrany *= -1;
-    console.log(rIrany);
   });
 
   const leirasMezoELEM = $(".adatok table th").eq(3);
-    leirasMezoELEM.on("click", function () {
+  leirasMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "leiras", rIrany);
-    console.log(lista);
     init(lista);
     initKartya(lista);
     initKosar(lista);
     rIrany *= -1;
-    console.log(rIrany);
   });
 }
 
@@ -96,10 +95,20 @@ function szuresLeirasSzerint() {
 }
 
 function torolesemeny() {
-  const torolELEM = $(".torol");
+  const torolELEM = $(".kuka");
   torolELEM.on("click", function (event) {
     let index = event.target.id;
     const LISTA = torol(allatokLISTA, index);
     init(LISTA);
+  });
+}
+
+function kosarbaTeszEsemeny() {
+  const kosarELEM = $(".kosarbaTesz");
+  kosarELEM.on("click", function(event) {
+    let index = event.target.id; 
+    let kivalasztottElem = allatokLISTA[index]; 
+    let kosarTartalom = kosarLetrehoz(kosarELEM); 
+    kosarMegjelenit(kosarTartalom);
   });
 }
