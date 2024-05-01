@@ -1,7 +1,9 @@
 header{
     text-align: center;
     padding: 20px 0;
+    background-color: rgb(229, 232, 240);
 }
+
 #kepek{
     width: 250px;
     height: 170px;
@@ -10,4 +12,39 @@ header{
     width:400px; 
     padding:10px; 
     margin:10px; 
+}
+.navbar-nav .nav-link {
+    font-size: 20px;
+}
+.gomb{
+    transition: all 2s;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 10px rgb(224, 224, 224),
+}
+.gomb:hover{
+    margin: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 10px rgb(224, 224, 224),
+                5px 5px 20px rgb(224, 224, 224);
+}
+.btn{
+    transition: all 2s;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 10px rgb(9, 2, 43),
+}
+.btn:hover{
+    margin: 10px;
+    text-align: center;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(224, 224, 224),
+                5px 5px 20px rgb(224, 224, 224);
 }
