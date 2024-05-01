@@ -6,6 +6,7 @@ import {
   szuresNev,
   szuresLeiras,
   torol,
+  szerkeszt,
 } from "./adatkezelo.js";
 import { kartyaLetrehoz, kartyaMegjelenit } from "./kartya.js";
 import { kosarLetrehoz, kosarMegjelenit } from "./kosar.js";
@@ -18,6 +19,50 @@ szuresArSzerint();
 szuresNevSzerint();
 szuresLeirasSzerint();
 
+$(document).ready(function () {
+  $(".adatHozzaad").hide();
+  $("#bezarGomb").hide(); 
+
+  $("#ujElemGomb").on("click", function () {
+    $(".adatHozzaad").show();
+    $("#bezarGomb").show();
+    $(this).hide();
+  });
+
+  $(document).on("click", "#bezarGomb", function () {
+    $(".adatHozzaad").hide();
+    $("#bezarGomb").hide();
+    $("#ujElemGomb").show();
+  });
+
+  $("#adatHozzaadasForm").submit(function (event) {
+    event.preventDefault();
+    let nev = $("#nev").val();
+    let kep = $("#kep").val();
+    let ar = $("#ar").val();
+    let leiras = $("#leiras").val();
+
+    let ujElemHTML = `<tr>
+        <td>${nev}</td>
+        <td><img id="kepek" alt="kep" src="${kep}"></td>
+        <td>${ar}</td>
+        <td>${leiras}</td>
+        <td><button class="kuka">🧹</button></td>
+        <td><button class="szerkeszt">✏️</button></td>
+      </tr>`;
+    $(".adatok tbody").append(ujElemHTML);
+  
+    $(".adatHozzaad").hide();
+    $("#bezarGomb").hide();
+    $("#ujElemGomb").show();
+  });
+
+  $(document).on("click", ".kuka", function () {
+    $(this).closest("tr").remove(); 
+  });
+});
+
+
 function initKartya(lista) {
   let txt = kartyaLetrehoz(lista);
   kartyaMegjelenit(txt);
@@ -25,9 +70,9 @@ function initKartya(lista) {
   kosarbaTeszEsemeny();
 }
 function initKosar() {
-  const uresKosar = []; 
-  const txt = kosarLetrehoz(uresKosar); 
-  kosarMegjelenit(txt); 
+  const uresKosar = [];
+  const txt = kosarLetrehoz(uresKosar);
+  kosarMegjelenit(txt);
 }
 
 function init(lista) {
@@ -35,6 +80,7 @@ function init(lista) {
   megjelenit(txt);
   rendezes();
   torolesemeny();
+  szerkesztEsemeny();
 }
 
 function rendezes() {
@@ -102,16 +148,23 @@ function torolesemeny() {
     init(LISTA);
   });
 }
-let kosarTartalom = []; 
+let kosarTartalom = [];
 function kosarbaTeszEsemeny() {
-  $(".kosarbaTesz").on("click", function(event) {
-    let index = event.target.id; 
-    let kivalasztottElem = allatokLISTA[index]; 
+  $(".kosarbaTesz").on("click", function (event) {
+    let index = event.target.id;
+    let kivalasztottElem = allatokLISTA[index];
     if (!kosarTartalom[kivalasztottElem.nev]) {
-      kosarTartalom[kivalasztottElem.nev] = kivalasztottElem; 
+      kosarTartalom[kivalasztottElem.nev] = kivalasztottElem;
     }
 
     kosarMegjelenit(kosarLetrehoz(Object.values(kosarTartalom)));
   });
-
+}
+function szerkesztEsemeny(){
+  const szerkesztELEM = $(".szerkeszt")
+  szerkesztELEM.on("click", function (event) {
+    let index = event.target.id;
+    const LISTA = szerkeszt(allatokLISTA, index)
+    init(LISTA)
+  })
 }

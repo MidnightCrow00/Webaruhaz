@@ -3,7 +3,10 @@ header{
     padding: 20px 0;
     background-color: rgb(229, 232, 240);
 }
-
+.adatHozzaad {
+    display: none; /* Űrlap elrejtése alapértelmezés szerint */
+  }
+  
 #kepek{
     width: 250px;
     height: 170px;

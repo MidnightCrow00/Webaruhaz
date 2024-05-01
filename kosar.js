@@ -8,11 +8,12 @@ export function kosarLetrehoz(kosarTartalom) {
     "<tr><th>Név</th><th></th><th>Ár(Ft)</th></tr>";
   txt += "</thead>";
   txt += "<tbody>";
-  kosarTartalom.forEach(elem => {
+  kosarTartalom.forEach((elem,index) => {
     txt += `<tr>
       <td>${elem.nev}</td>
       <td><img id="kepek" alt="kep" src="${elem.kep}"></td>
       <td>${elem.ar}</td>
+      <td class="kuka" id="${index}">🗑</td>
     </tr>`;
     osszeg += elem.ar;
   });

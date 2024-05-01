@@ -34,3 +34,21 @@ export function torol(lista, index) {
   lista.splice(index, 1);
   return lista;
 }
+export function szerkeszt(lista,index) {
+  let nevELEM = $(`#cim${index}`)[0]
+  let arELEM = $(`#ar${index}`)[0]
+  let leirasELEM = $(`#leiras${index}`)[0]
+
+  if(lista[index].szerkesztheto){
+    let ujnev = nevELEM.innerHTML
+    let ujar = arELEM.innerHTML
+    let ujleiras = leirasELEM.innerHTML
+
+    lista[index].cim = ujnev;
+    lista[index].ar = ujar;
+    lista[index].leiras = ujleiras;
+  }
+  lista[index].szerkesztheto = !lista[index].szerkesztheto
+
+  return lista;
+}
