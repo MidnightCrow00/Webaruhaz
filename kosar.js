@@ -4,11 +4,10 @@ export function kosarLetrehoz(kosarTartalom) {
   let txt = "<div class='table-responsive'><table class='table table-striped'>";
   txt += "<h1>Kosár tartalma:</h1>";
   txt += "<thead>";
-  txt +=
-    "<tr><th>Név</th><th></th><th>Ár(Ft)</th></tr>";
+  txt += "<tr><th>Név</th><th></th><th>Ár(Ft)</th></tr>";
   txt += "</thead>";
   txt += "<tbody>";
-  kosarTartalom.forEach((elem,index) => {
+  kosarTartalom.forEach((elem, index) => {
     txt += `<tr>
       <td>${elem.nev}</td>
       <td><img id="kepek" alt="kep" src="${elem.kep}"></td>

@@ -152,12 +152,8 @@ let kosarTartalom = [];
 function kosarbaTeszEsemeny() {
   $(".kosarbaTesz").on("click", function (event) {
     let index = event.target.id;
-    let kivalasztottElem = allatokLISTA[index];
-    if (!kosarTartalom[kivalasztottElem.nev]) {
-      kosarTartalom[kivalasztottElem.nev] = kivalasztottElem;
-    }
-
-    kosarMegjelenit(kosarLetrehoz(Object.values(kosarTartalom)));
+    kosarTartalom.push(allatokLISTA[index])
+    kosarMegjelenit(kosarLetrehoz(kosarTartalom));
   });
 }
 function szerkesztEsemeny(){
