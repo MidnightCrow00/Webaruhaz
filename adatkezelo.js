@@ -1,4 +1,4 @@
-export function rendez(lista, rIrany) {
+export function rendez(lista, kulcs, rIrany) {
   const rlista = lista.sort(function (a1, a2) {
     return a1[kulcs] < a2[kulcs] ? -1 * rIrany : 1 * rIrany;
   });

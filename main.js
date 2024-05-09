@@ -1,13 +1,6 @@
 import { allatokLISTA } from "./adat.js";
 import { megjelenit, tablazatLetrehoz } from "./tablazat.js";
-import {
-  rendez,
-  szuresAr,
-  szuresNev,
-  szuresLeiras,
-  torol,
-  szerkeszt,
-} from "./adatkezelo.js";
+import {rendez,szuresAr,szuresNev,szuresLeiras,torol,szerkeszt} from "./adatkezelo.js";
 import { kartyaLetrehoz, kartyaMegjelenit } from "./kartya.js";
 import { kosarLetrehoz, kosarMegjelenit } from "./kosar.js";
 
@@ -18,50 +11,6 @@ initKosar(allatokLISTA);
 szuresArSzerint();
 szuresNevSzerint();
 szuresLeirasSzerint();
-
-$(document).ready(function () {
-  $(".adatHozzaad").hide();
-  $("#bezarGomb").hide(); 
-
-  $("#ujElemGomb").on("click", function () {
-    $(".adatHozzaad").show();
-    $("#bezarGomb").show();
-    $(this).hide();
-  });
-
-  $(document).on("click", "#bezarGomb", function () {
-    $(".adatHozzaad").hide();
-    $("#bezarGomb").hide();
-    $("#ujElemGomb").show();
-  });
-
-  $("#adatHozzaadasForm").submit(function (event) {
-    event.preventDefault();
-    let nev = $("#nev").val();
-    let kep = $("#kep").val();
-    let ar = $("#ar").val();
-    let leiras = $("#leiras").val();
-
-    let ujElemHTML = `<tr>
-        <td>${nev}</td>
-        <td><img id="kepek" alt="kep" src="${kep}"></td>
-        <td>${ar}</td>
-        <td>${leiras}</td>
-        <td><button class="kuka">🧹</button></td>
-        <td><button class="szerkeszt">✏️</button></td>
-      </tr>`;
-    $(".adatok tbody").append(ujElemHTML);
-  
-    $(".adatHozzaad").hide();
-    $("#bezarGomb").hide();
-    $("#ujElemGomb").show();
-  });
-
-  $(document).on("click", ".kuka", function () {
-    $(this).closest("tr").remove(); 
-  });
-});
-
 
 function initKartya(lista) {
   let txt = kartyaLetrehoz(lista);
@@ -78,7 +27,6 @@ function initKosar() {
 function init(lista) {
   let txt = tablazatLetrehoz(lista);
   megjelenit(txt);
-  rendezes();
   torolesemeny();
   szerkesztEsemeny();
 }
@@ -117,8 +65,6 @@ function szuresArSzerint() {
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
     init(szuresAr(allatokLISTA, szoveg));
-    initKartya(szuresAr(allatokLISTA, szoveg));
-    initKosar(szuresAr(allatokLISTA, szoveg));
   });
 }
 
@@ -148,6 +94,7 @@ function torolesemeny() {
     init(LISTA);
   });
 }
+
 let kosarTartalom = [];
 function kosarbaTeszEsemeny() {
   $(".kosarbaTesz").on("click", function (event) {
@@ -156,6 +103,7 @@ function kosarbaTeszEsemeny() {
     kosarMegjelenit(kosarLetrehoz(kosarTartalom));
   });
 }
+
 function szerkesztEsemeny(){
   const szerkesztELEM = $(".szerkeszt")
   szerkesztELEM.on("click", function (event) {
