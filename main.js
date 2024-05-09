@@ -106,7 +106,7 @@ function kosarbaTeszEsemeny() {
     // hogy a kosár i. elemének a neve azonos-e, mint az az elem neve, amire most kattintottunk. 
     
     for (let index = 0; index < kosarTartalom.length; index++) {
-      kosarTartalom[index]
+      kosarTartalom[index] 
     }
     //Ha nincs ilyen elem, akkor hozzáadunk egy db:1 kulcs érték párt az aktuális elemhez és ezt rakjuk bele a kosárba
     //ha van már ilyen elem, akkor annak az elemnek a kosárban a db értékét megnöveljük. 
