@@ -11,7 +11,7 @@ export function kosarLetrehoz(kosarTartalom) {
     txt += `<tr>
       <td>${elem.nev}</td>
       <td><img id="kepek" alt="kep" src="${elem.kep}"></td>
-      <td>${elem.ar}</td>
+      <td>${elem.ar} Ft</td>
       <td class="kuka" id="${index}">🗑</td>
     </tr>`;
     osszeg += elem.ar;

@@ -8,8 +8,8 @@ export function tablazatLetrehoz(lista) {
               <td><img id="kepek" alt="kep" src="${elem.kep}"></td>
               <td id="ar${index}" contentEditable=${elem.szerkesztheto?"true":"false"}>${elem.ar} Ft</td>
               <td id="leiras${index}" contentEditable=${elem.szerkesztheto?"true":"false"}>${elem.leiras}</td>
-              <td><button class="kuka" id="${index}">🧹</button></td>
-              <td><button id="${index}" class="szerkeszt">${elem.szerkesztheto?"✔":"✏"}</button></td>
+              <td class="kuka" id="${index}">🧹</td>
+              <td id="${index}" class="szerkeszt">${elem.szerkesztheto?"✔":"✏"}</td>
           </tr>`;
     });
     txt += "</table>";

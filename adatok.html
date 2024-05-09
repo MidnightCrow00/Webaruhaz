@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="stilus.css" >
+    <title>Albert Orsolya</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Webáruház</h1>
+      </header>
+      <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item gomb">
+              <a class="nav-link " href="index.html">Publikus felület</a>
+            </li>
+            <li class="nav-item gomb">
+              <a class="nav-link" href="admin.html">Admin felület</a>
+            </li>
+            <li class="nav-item gomb">
+                <a class="nav-link" href="adatok.html">Rendelési adatok</a>
+            </li>
+          </ul>
+        </div>
+      </nav> 
+        <h1 style="margin-top: 5%; text-align: center;">Űrlap kitöltése a rendeléshez</h1>
+              <p style="text-align: center; margin-bottom: 3%">Kérjük töltse ki az alábbi mezőket az Ön adataival!</p>
+              <form style="margin: 10px;">
+                <div class="mb-3 mt-3">
+                    <label for="vnev">Vezetéknév:</label>
+                    <input type="vnev" class="form-control" id="vnev" placeholder="Pl. Szeder" name="vnev" required>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="knev">Keresztnév:</label>
+                    <input type="knev" class="form-control" id="knev" placeholder="Pl. Mária" name="knev" required>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="startDate">Születési dátum:</label>
+                    <input id="startDate" class="form-control" type="date" name="szdatum" required>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="email">Email cím:</label>
+                    <input type="email" class="form-control" id="email" placeholder="nev@gmail.com" name="szdatum" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1">
+                        <label for="tszam">Telefonszám:</label>
+                        <input type="text" class="form-control" placeholder=" +36" disabled>
+                    </div>
+                    <div class="col">
+                        <label for="tszam2"> </label>
+                        <input type="tszam2" class="form-control" id="tszam" placeholder="Pl. 20 123 4567 " name="vnev" required>
+                    </div>
+                  </div>
+
+                    <div class="mb-3 mt-3">
+                        <label for="szcim">Szállítási cím:</label>
+                        <input type="szcim" class="form-control" id="szcim" placeholder="Utca neve pl. Kutyavári" name="szcim" required>
+                        <div class="mb-3 mt-3">
+                            <input type="hszam" class="form-control" id="hszam" placeholder="Házszám pl. 46" name="hszam" required>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1%;">
+                        <div class="col">
+                            <input type="varos" class="form-control" id="varos" placeholder="Város pl. Budapest" name="varos" required>
+                        </div>
+                        <div class="col">
+                            <input type="megye" class="form-control" id="megye" placeholder="Megye pl. Pest" name="megye" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="iszam" class="form-control" id="iszam" placeholder="Irányítószám pl. 1119" name="iszam" required>
+                        </div>
+                        <div class="col">
+                            <input type="orszag" class="form-control" id="orszag" placeholder="Ország pl. Magyarország" name="orszag" required><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="kartya">Bankkártya adatok:</label>
+                        <div class="col">
+                            <input type="kartyanev" class="form-control" id="kartyanev" placeholder="Kártyán szereplő név" name="kartyanev" required>
+                        </div>
+                        <div class="col">
+                            <input type="kartyaszam" class="form-control" id="kartyaszam" placeholder="Kártyaszám" name="kartyaszam" required>
+                        </div>
+                        <div class="col">
+                            <input type="kartyalejarat" class="form-control" id="kartyalejarat" placeholder="Lejárati dátum HH / ÉÉ" name="kartyalejarat" required>
+                        </div>
+                        <div class="col">
+                            <input type="cvc" class="form-control" id="cvc" placeholder="CVC szám" name="cvc" required>
+                        </div>
+                    </div><br>
+                    <button type="button" class="btn btn-primary gomb">Rendelés küldése</button>
+              </form>
+        </article>
+    </main>
+</body>
+</html>
+
+    </main>
+  </body>
+</html>

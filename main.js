@@ -23,6 +23,7 @@ function initKosar() {
   const uresKosar = [];
   const txt = kosarLetrehoz(uresKosar);
   kosarMegjelenit(txt);
+  torolesemeny();
 }
 
 function init(lista) {
