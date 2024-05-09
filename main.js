@@ -18,6 +18,7 @@ function initKartya(lista) {
   rendezes();
   kosarbaTeszEsemeny();
 }
+
 function initKosar() {
   const uresKosar = [];
   const txt = kosarLetrehoz(uresKosar);
