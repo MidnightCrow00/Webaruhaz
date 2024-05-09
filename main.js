@@ -21,7 +21,7 @@ function initKartya(lista) {
 
 function initKosar() {
   const uresKosar = [];
-  const txt = kosarLetrehoz(uresKosar);
+  let txt = kosarLetrehoz(uresKosar);
   kosarMegjelenit(txt);
   torolesemeny();
 }
@@ -101,6 +101,15 @@ let kosarTartalom = [];
 function kosarbaTeszEsemeny() {
   $(".kosarbaTesz").on("click", function (event) {
     let index = event.target.id;
+    //eldöntés tétele
+    //végig kell menni a kosár termékein és meg kell néz ni, 
+    // hogy a kosár i. elemének a neve azonos-e, mint az az elem neve, amire most kattintottunk. 
+    
+    for (let index = 0; index < kosarTartalom.length; index++) {
+      kosarTartalom[index]
+    }
+    //Ha nincs ilyen elem, akkor hozzáadunk egy db:1 kulcs érték párt az aktuális elemhez és ezt rakjuk bele a kosárba
+    //ha van már ilyen elem, akkor annak az elemnek a kosárban a db értékét megnöveljük. 
     kosarTartalom.push(allatokLISTA[index])
     kosarMegjelenit(kosarLetrehoz(kosarTartalom));
   });

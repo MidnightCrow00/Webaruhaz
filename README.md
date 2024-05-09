@@ -29,12 +29,15 @@ A kiemelt termék mellett megjelenik egy bal és egy jobb léptető gomb, amivel
 4. *** szures(lista, keresoSzoveg) *** -> visszért.: szurtLista; akkor fog lefutni, ha a szűrőmezőben változás történik (keyup) -> a listában a név mezőben keres egyezéseket és szűri a listát ez alapján -> filter
 5. *** sorBeszur(lista) *** -> visszért.: ujLista; ha a submit gombra kattintunk akkor fut le a függvény, az űrlap adatokat objektumá alakítjuk, majd hozzáadjuk a listához (push)
 6. *** torol(lista, index) *** -> törli a lista index-edik sorát, minden sor mellett lesz egy torol ikon, amire kattintva megkapjuk az adott sor indexét és meghívodik a torol függvény
+7. *** szerkeszt(lista, index) *** -> lehetővé teszi, hogy amár létező elemeket szerkeszthessük.
 
 ## Függvények Publikus felület
 
 1. *** kosarLetrehoz(lista) *** -> txt lista alapján készít html kódot, táblázatot, visszaadja az elkészült kosarat.
 2. *** kartyaLetrehoz(klista) *** -> txt lista alapján készít html kódot, táblázatot, visszaadja az elkészült htlm szöveget
 3. *** kosarMegjelenit(txt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
-2. *** kartyaMegjelenit(ktxt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
-3. *** rendez(lista, kulcs, rIrany) *** -> visszért.: rlista; a lista megrendezi a listát az adott paraméter szerint (név kulcs szerint) és a megrendezett listát visszadja, akkor futt le, amikor rákattintunk a táblázat fejlécére
-6. *** torol(lista, index) *** -> törli a lista index-edik sorát, minden sor mellett lesz egy torol ikon, amire kattintva megkapjuk az adott sor indexét és meghívodik a torol függvény
+4. *** szures(lista, keresoSzoveg) *** -> visszért.: szurtLista; akkor fog lefutni, ha a szűrőmezőben változás történik (keyup) -> a listában a név mezőben keres egyezéseket és szűri a listát ez alapján -> filter
+5. *** kartyaMegjelenit(ktxt) *** -> megjeleníti a paraméterben kapott szöveget egy adott html elemben.
+6. *** rendez(lista, kulcs, rIrany) *** -> visszért.: rlista; a lista megrendezi a listát az adott paraméter szerint (név kulcs szerint) és a megrendezett listát visszadja, akkor futt le, amikor rákattintunk a táblázat fejlécére
+7. *** torol(lista, index) *** -> törli a lista index-edik sorát, minden sor mellett lesz egy torol ikon, amire kattintva megkapjuk az adott sor indexét és meghívodik a torol függvény
+8. *** kosarbaTeszEsemeny() *** -> kosarba helyezi az adot elemeket a kartyak közül.
