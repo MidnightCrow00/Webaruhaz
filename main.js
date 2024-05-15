@@ -1,13 +1,14 @@
 import { allatokLISTA } from "./adat.js";
 import { megjelenit, tablazatLetrehoz } from "./tablazat.js";
-import {rendez,szuresAr,szuresNev,szuresLeiras,torol,szerkeszt} from "./adatkezelo.js";
+import { rendez, szuresAr, szuresNev, szuresLeiras, torol, szerkeszt } from "./adatkezelo.js";
 import { kartyaLetrehoz, kartyaMegjelenit } from "./kartya.js";
 import { kosarLetrehoz, kosarMegjelenit } from "./kosar.js";
 
 let rIrany = 1;
+
 init(allatokLISTA);
 initKartya(allatokLISTA);
-initKosar(allatokLISTA);
+initKosar();
 szuresArSzerint();
 szuresNevSzerint();
 szuresLeirasSzerint();
@@ -39,7 +40,6 @@ function rendezes() {
     const lista = rendez(allatokLISTA, "nev", rIrany);
     init(lista);
     initKartya(lista);
-    initKosar(lista);
     rIrany *= -1;
   });
 
@@ -48,16 +48,22 @@ function rendezes() {
     const lista = rendez(allatokLISTA, "ar", rIrany);
     init(lista);
     initKartya(lista);
-    initKosar(lista);
     rIrany *= -1;
   });
-
+  
+  const arMezo2ELEM = $("#ar");
+  arMezo2ELEM.on("click", function () {
+    const lista = rendez(allatokLISTA, "ar", rIrany);
+    rIrany *= -1;
+    init(lista);
+    initKartya(lista);
+  });
+  
   const leirasMezoELEM = $(".adatok table th").eq(3);
   leirasMezoELEM.on("click", function () {
     const lista = rendez(allatokLISTA, "leiras", rIrany);
     init(lista);
     initKartya(lista);
-    initKosar(lista);
     rIrany *= -1;
   });
 }
@@ -66,7 +72,9 @@ function szuresArSzerint() {
   const szuroElem = $("#ar");
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
-    init(szuresAr(allatokLISTA, szoveg));
+    const szurtLista = szuresAr(allatokLISTA, szoveg);
+    init(szurtLista);
+    initKartya(szurtLista);
   });
 }
 
@@ -74,9 +82,9 @@ function szuresNevSzerint() {
   const szuroElem = $("#nev");
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
-    init(szuresNev(allatokLISTA, szoveg));
-    initKartya(szuresNev(allatokLISTA, szoveg));
-    initKosar(szuresNev(allatokLISTA, szoveg));
+    const szurtLista = szuresNev(allatokLISTA, szoveg);
+    init(szurtLista);
+    initKartya(szurtLista);
   });
 }
 
@@ -84,16 +92,19 @@ function szuresLeirasSzerint() {
   const szuroElem = $("#leiras");
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
-    init(szuresLeiras(allatokLISTA, szoveg));
+    const szurtLista = szuresLeiras(allatokLISTA, szoveg);
+    init(szurtLista);
+    initKartya(szurtLista);
   });
 }
 
 function torolesemeny() {
   const torolELEM = $(".kuka");
   torolELEM.on("click", function (event) {
-    let index = event.target.id;
+    let index = $(event.target).data("index");
     const LISTA = torol(allatokLISTA, index);
     init(LISTA);
+    initKartya(LISTA);
   });
 }
 
@@ -101,25 +112,29 @@ let kosarTartalom = [];
 function kosarbaTeszEsemeny() {
   $(".kosarbaTesz").on("click", function (event) {
     let index = event.target.id;
-    //eldöntés tétele
-    //végig kell menni a kosár termékein és meg kell néz ni, 
-    // hogy a kosár i. elemének a neve azonos-e, mint az az elem neve, amire most kattintottunk. 
-    
-    for (let index = 0; index < kosarTartalom.length; index++) {
-      kosarTartalom[index] 
+    let termek = allatokLISTA[index];
+    let letezik = false;
+    for (let i = 0; i < kosarTartalom.length; i++) {
+      if (kosarTartalom[i].nev === termek.nev) {
+        kosarTartalom[i].db++;
+        letezik = true;
+        break;
+      }
     }
-    //Ha nincs ilyen elem, akkor hozzáadunk egy db:1 kulcs érték párt az aktuális elemhez és ezt rakjuk bele a kosárba
-    //ha van már ilyen elem, akkor annak az elemnek a kosárban a db értékét megnöveljük. 
-    kosarTartalom.push(allatokLISTA[index])
+    if (!letezik) {
+      termek.db = 1;
+      kosarTartalom.push(termek);
+    }
     kosarMegjelenit(kosarLetrehoz(kosarTartalom));
   });
 }
 
-function szerkesztEsemeny(){
-  const szerkesztELEM = $(".szerkeszt")
+function szerkesztEsemeny() {
+  const szerkesztELEM = $(".szerkeszt");
   szerkesztELEM.on("click", function (event) {
     let index = event.target.id;
-    const LISTA = szerkeszt(allatokLISTA, index)
-    init(LISTA)
-  })
+    const LISTA = szerkeszt(allatokLISTA, index);
+    init(LISTA);
+    initKartya(LISTA);
+  });
 }
