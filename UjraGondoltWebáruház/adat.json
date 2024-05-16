@@ -1,11 +1,40 @@
 {
-    "allatokLista": [
+    "kutyasLista": [
       {
-        "nev": "Bárány",
-        "ar": 25000,
-        "kep": "https://images.pexels.com/photos/6152104/pexels-photo-6152104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "nev": "",
+        "ar": ,
+        "kep": "https://images.pexels.com/photos/14576469/pexels-photo-14576469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "id": "a718",
-        "leiras": "Biofűnyiró"
+        "leiras": ""
+      },
+      {
+        "nev": "",
+        "ar": ,
+        "kep": "",
+        "id": "a718",
+        "leiras": ""
+      },
+      {
+        "nev": "",
+        "ar": ,
+        "kep": "",
+        "id": "a718",
+        "leiras": ""
+      },
+      {
+        "nev": "",
+        "ar": ,
+        "kep": "",
+        "id": "a718",
+        "leiras": ""
+      },
+      {
+        "nev": "",
+        "ar": ,
+        "kep": "",
+        "id": "a718",
+        "leiras": ""
       }
+
     ]
   }
