@@ -13,8 +13,7 @@ export function postAdat(vegpont,adat) {
 export function deleteAdat(vegpont,id) {
     fetch(vegpont+"/"+id,{method: "DELETE"})
     .then(response => response.json())
-    .then(data => console.log(data))
-    .catch((error)=>console.log(error));
+    .then(data => console.log(data)).catch((error)=>console.log(error));
 }
 export function putAdat(vegpont,id,adat) {
     fetch(vegpont+"/"+id,{method: "PUT",body : JSON.stringify(adat)})
