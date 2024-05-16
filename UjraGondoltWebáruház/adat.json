@@ -1,40 +1,40 @@
 {
     "kutyasLista": [
       {
-        "nev": "",
-        "ar": ,
-        "kep": "https://images.pexels.com/photos/14576469/pexels-photo-14576469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "id": "a718",
-        "leiras": ""
+        "nev": "Kecske",
+        "ar": 10000,
+        "kep": "https://www.google.hu/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fid%2Fphoto%2Fcute-black-brown-baby-pygmy-goat-navel-cord-standing-side-379771014.html&psig=AOvVaw09qciO_vhdNSv4iMGcm5Iz&ust=1715956534333000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjf8rWykoYDFQAAAAAdAAAAABAJ",
+        "leiras": "Ez a kecske kiváló társ lehet, akár egy vidéki farm életében, akár egy városi kertben, és biztosan sok vidámságot és szórakozást hozna az életedbe."
       },
       {
-        "nev": "",
-        "ar": ,
-        "kep": "",
-        "id": "a718",
-        "leiras": ""
+        "nev": "Tehén",
+        "ar": 250000,
+        "kep": "https://www.google.hu/url?sa=i&url=https%3A%2F%2Fnegativespace.co%2Fcow-face-portrait%2F&psig=AOvVaw09qciO_vhdNSv4iMGcm5Iz&ust=1715956534333000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjf8rWykoYDFQAAAAAdAAAAABAX",
+        "leiras": "Egy tekintélyes méretű és szép tehén, klasszikus fekete-fehér színben."
       },
       {
-        "nev": "",
-        "ar": ,
-        "kep": "",
-        "id": "a718",
-        "leiras": ""
+        "nev": "Kakas",
+        "ar": 1500,
+        "kep": "https://www.google.hu/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fes%2Fsearch%2Fcolor-rooster&psig=AOvVaw09qciO_vhdNSv4iMGcm5Iz&ust=1715956534333000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjf8rWykoYDFQAAAAAdAAAAABAl",
+        "leiras": "Egy színpompás kakas, büszkén állva, készen arra, hogy reggelente felébressze a háztartást."
       },
       {
-        "nev": "",
-        "ar": ,
-        "kep": "",
-        "id": "a718",
-        "leiras": ""
+        "nev": "Bárány",
+        "ar": 35000,
+        "kep": "https://www.google.hu/url?sa=i&url=https%3A%2F%2Fwww.pngall.com%2Fes%2Fsheep-png%2Fdownload%2F1813&psig=AOvVaw1clyCp5g9y_MokXF5wmGoK&ust=1715956825800000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCguMGzkoYDFQAAAAAdAAAAABAE",
+        "leiras": "Egy puha és gyapjas bárány, ami ideális biofűnyiró."
       },
       {
-        "nev": "",
-        "ar": ,
-        "kep": "",
-        "id": "a718",
-        "leiras": ""
+        "nev": "Tyúk",
+        "ar": 1600,
+        "kep": "https://www.google.hu/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fhu%2Fphoto%2Fbeautiful-rooster-white-background-domestic-animal-354151998.html&psig=AOvVaw09qciO_vhdNSv4iMGcm5Iz&ust=1715956534333000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjf8rWykoYDFQAAAAAdAAAAABBo",
+        "leiras": "Egy fehér háttér előtt pompázó, gyönyörű tyúk, aki minden bizonnyal felvidítja majd a baromfiudvar hangulatát."
+      },
+      {
+        "nev": "Láma",
+        "ar": 350000,
+        "kep": "https://www.google.hu/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fbr%2Ffoto%2Fp%25C3%25A9-guanaco-gm506190007-44870670&psig=AOvVaw09qciO_vhdNSv4iMGcm5Iz&ust=1715956534333000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjf8rWykoYDFQAAAAAdAAAAABB5",
+        "leiras": "Egy magas és fenséges lama, amely rendkívül praktikus lehet háziállatként vagy akár terápiás célokra is."
       }
-
     ]
   }
